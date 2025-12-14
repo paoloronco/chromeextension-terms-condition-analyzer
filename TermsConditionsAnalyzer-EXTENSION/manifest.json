@@ -1,0 +1,44 @@
+{
+  "manifest_version": 3,
+  "name": "Legaly",
+  "version": "1.0",
+  "description": "Clear legal documents, better decisions. With Legaly, you know what you’re agreeing to.",
+  "permissions": ["scripting", "activeTab", "storage"],
+  "host_permissions": [
+    "firebase_functions_URL",
+    "const ANALYZE_FUNCTION_URL = 'firebase_functions_URL';
+"analyzeTerms
+  ],
+  "content_security_policy": {
+    "extension_pages": "script-src 'self' 'wasm-unsafe-eval'; object-src 'self'"
+  },
+  "action": {
+    "default_popup": "popup.html",
+    "default_icon": {
+      "16": "icon_16x16.png",
+      "32": "icon_32x32.png",
+      "48": "icon_48x48.png"
+    }
+  },
+  "icons": {
+    "16": "icon_16x16.png",
+    "32": "icon_32x32.png",
+    "48": "icon_48x48.png",
+    "128": "icon_128x128.png"
+  },
+  "background": {
+    "service_worker": "background.js"
+  },
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["content.js"]
+    }
+  ],
+  "web_accessible_resources": [
+    {
+      "resources": ["languages.js"],
+      "matches": ["<all_urls>"]
+    }
+  ]
+}

@@ -1,0 +1,15 @@
+{
+  "indexes": [
+    {
+      "collectionGroup": "rate_limits",
+      "queryScope": "COLLECTION",
+      "fields": [
+        {
+          "fieldPath": "lastCleanup",
+          "order": "ASCENDING"
+        }
+      ]
+    }
+  ],
+  "fieldOverrides": []
+}

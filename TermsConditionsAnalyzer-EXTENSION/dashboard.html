@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title data-i18n="dashboardTitle">Legaly Dashboard</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+</head>
+<body class="dashboard-body">
+
+  <header class="dashboard-header">
+    <h1>Legaly<span>Dashboard</span></h1>
+  </header>
+
+  <div class="tabs">
+    <button class="tab-link" data-tab="privacy" data-i18n="privacySettings">Privacy Settings</button>
+    <button class="tab-link" data-tab="settings" data-i18n="extensionSettings">Extension Settings</button>
+    <button class="tab-link" data-tab="about" data-i18n="about">About</button>
+  </div>
+
+  <div id="privacy" class="tab-content">
+    <div class="settings-section">
+        <h2 data-i18n="yourPrivacyPreferences">Your Privacy Preferences</h2>
+        <div class="slider-group">
+            <div class="slider-label">
+              <label for="hiddenFees" data-i18n="hiddenFees">Hidden Fees</label>
+              <span class="slider-value" id="val-hiddenFees">50</span>
+            </div>
+            <div class="slider-description" data-i18n="hiddenFeesDesc">Hidden fees not highlighted in the terms.</div>
+            <input type="range" min="0" max="100" value="50" id="hiddenFees" class="slider">
+        </div>
+        <div class="slider-group">
+            <div class="slider-label">
+              <label for="dataCollection" data-i18n="dataCollection">Data Collection</label>
+              <span class="slider-value" id="val-dataCollection">50</span>
+            </div>
+            <div class="slider-description" data-i18n="dataCollectionDesc">Information collected about you during use.</div>
+            <input type="range" min="0" max="100" value="50" id="dataCollection" class="slider">
+        </div>
+        <div class="slider-group">
+            <div class="slider-label">
+              <label for="targetedAds" data-i18n="targetedAds">Targeted Advertising</label>
+              <span class="slider-value" id="val-targetedAds">50</span>
+            </div>
+            <div class="slider-description" data-i18n="targetedAdsDesc">Personalized advertising based on your profile.</div>
+            <input type="range" min="0" max="100" value="50" id="targetedAds" class="slider">
+        </div>
+        <div class="slider-group">
+            <div class="slider-label">
+              <label for="dataRetention" data-i18n="dataRetention">Data Retention</label>
+              <span class="slider-value" id="val-dataRetention">50</span>
+            </div>
+            <div class="slider-description" data-i18n="dataRetentionDesc">How long your data is kept.</div>
+            <input type="range" min="0" max="100" value="50" id="dataRetention" class="slider">
+        </div>
+        <div class="slider-group">
+            <div class="slider-label">
+              <label for="rightToDelete" data-i18n="rightToDelete">Right to Delete</label>
+              <span class="slider-value" id="val-rightToDelete">50</span>
+            </div>
+            <div class="slider-description" data-i18n="rightToDeleteDesc">Ability to delete your data on request.</div>
+            <input type="range" min="0" max="100" value="50" id="rightToDelete" class="slider">
+        </div>
+        <div class="slider-group">
+            <div class="slider-label">
+              <label for="dataSharing" data-i18n="dataSharing">Data Sharing with Third Parties</label>
+              <span class="slider-value" id="val-dataSharing">50</span>
+            </div>
+            <div class="slider-description" data-i18n="dataSharingDesc">Whether your data is shared with third parties.</div>
+            <input type="range" min="0" max="100" value="50" id="dataSharing" class="slider">
+        </div>
+    </div>
+</div>
+
+  <div id="settings" class="tab-content">
+    <div class="settings-section">
+        <h2 data-i18n="extensionSettings">Extension Settings</h2>
+        <div class="setting-item">
+            <label for="languageSelect" data-i18n="language">Language</label>
+            <select id="languageSelect">
+              <option value="en">English</option>
+              <option value="es">Español</option>
+              <option value="it">Italiano</option>
+              <option value="fr">Français</option>
+              <option value="de">Deutsch</option>
+            </select>
+        </div>
+    </div>
+  </div>
+
+  <div id="about" class="tab-content">
+    <div class="about-section">
+      <h2 data-i18n="aboutTitle">About Legaly</h2>
+      <p data-i18n="aboutText1">
+        Legaly is a powerful browser extension designed to make complex legal documents easy to understand. It uses advanced AI to analyze Terms and Conditions or Privacy Policies on any webpage, providing you with a clear and concise summary of the most important points.
+      </p>
+  
+      <h3 data-i18n="howItWorks" class="section-heading">How it Works</h3>
+      <p data-i18n="aboutText2">
+        Simply click the <strong>‘Analyze’</strong> button in the popup, and the extension will scan the page content and securely send it to our backend for processing. In just seconds, you'll get a smart summary highlighting key topics like <em>data collection, hidden fees</em>, and <em>your rights</em> — so you can navigate the web with confidence.
+      </p>
+  
+      <div class="app-details">
+        <p><strong><span data-i18n="version">Version</span></strong>: 1.0.0</p>
+        <p><span data-i18n="copyright">© Copyright 2025 Legaly. All rights reserved.</span></p>
+        <p><strong>Contact</strong>: <a href="mailto:support@legaly.ai">info@paoloronco.it</a></p>
+      </div>
+    </div>
+  </div>
+  
+  <!-- Load scripts in order -->
+  <script src="languages.js"></script>
+  <script src="dashboard-init.js"></script>
+  <script src="dashboard.js"></script>
+</body>
+</html>
